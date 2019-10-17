@@ -1,4 +1,4 @@
-package com.csci360.electionapp.model;
+package com.csci360.activitytracker.model;
 
 import javafx.beans.property.StringProperty;
 
