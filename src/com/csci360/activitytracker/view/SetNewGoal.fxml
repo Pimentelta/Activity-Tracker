@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewGoalController">
    <children>
       <Pane layoutX="-264.0" layoutY="-314.0" prefHeight="329.0" prefWidth="360.0" style="-fx-background-color: lightblue;">
          <children>
