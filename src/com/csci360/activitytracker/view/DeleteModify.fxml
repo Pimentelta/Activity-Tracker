@@ -58,12 +58,12 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: lightblue;" text="Home">
+            <Button id="HomeButton" fx:id="homeButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: lightblue;" text="Home">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="150.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: lightblue;" text="Go Back">
+            <Button id="BackButton" layoutX="150.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: lightblue;" text="Go Back">
                <font>
                   <Font size="15.0" />
                </font>
