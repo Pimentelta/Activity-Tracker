@@ -1,4 +1,4 @@
-package controller;
+package com.csci360.activitytracker.controller;
 
 import com.csci360.activitytracker.model.Session;
 

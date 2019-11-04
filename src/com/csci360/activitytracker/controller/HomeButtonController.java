@@ -1,4 +1,4 @@
-package controller;
+package com.csci360.activitytracker.controller;
 import javafx.animation.*;
 import java.net.URL;
 /*import java.time.Duration;

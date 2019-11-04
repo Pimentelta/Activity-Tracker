@@ -1,11 +1,11 @@
-package controller;
+package com.csci360.activitytracker.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 
-public class LiveGraphController {
+public class InputDataController {
 
     @FXML
     private ResourceBundle resources;
