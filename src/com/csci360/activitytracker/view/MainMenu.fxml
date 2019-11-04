@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.MyJavaFX">
+<AnchorPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.MyJavaFX">
    <children>
       <Pane layoutY="-53.0" prefHeight="367.0" prefWidth="405.0" style="-fx-background-color: gold;">
          <children>
@@ -24,32 +24,32 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="104.0" prefWidth="203.0" style="-fx-background-color: gold;" text="Live Graph">
+            <Button mnemonicParsing="false" onAction="#showLiveGraph" prefHeight="104.0" prefWidth="203.0" style="-fx-background-color: gold;" text="Live Graph">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="106.0" prefWidth="202.0" style="-fx-background-color: gold;" text="New Session" GridPane.columnIndex="1">
+            <Button mnemonicParsing="false" onAction="#showNewSession" prefHeight="106.0" prefWidth="202.0" style="-fx-background-color: gold;" text="New Session" GridPane.columnIndex="1">
                <font>
                   <Font size="29.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="108.0" prefWidth="203.0" style="-fx-background-color: gold;" text="Set New Goal" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#showSetNewGoal" prefHeight="108.0" prefWidth="203.0" style="-fx-background-color: gold;" text="Set New Goal" GridPane.rowIndex="1">
                <font>
                   <Font size="27.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="108.0" prefWidth="202.0" style="-fx-background-color: gold;" text="Sleep" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#showSleep" prefHeight="108.0" prefWidth="202.0" style="-fx-background-color: gold;" text="Sleep" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="29.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="103.0" prefWidth="207.0" style="-fx-background-color: gold;" text="View Data" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#showViewData" prefHeight="103.0" prefWidth="207.0" style="-fx-background-color: gold;" text="View Data" GridPane.rowIndex="2">
                <font>
                   <Font size="29.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="202.0" style="-fx-background-color: gold;" text="Change Time" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#showChangeTime" prefHeight="105.0" prefWidth="202.0" style="-fx-background-color: gold;" text="Change Time" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="26.0" />
                </font>

@@ -23,6 +23,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.application.Application;
+
+import java.io.IOException;
 import java.net.URL;
 
 import javafx.application.Application;
@@ -77,59 +79,46 @@ public class activityTrackerGUI extends Application {
 	}
 //JavaFX application still use the main method.
 //It should only ever contain the call to the launch method
-	public static void main(String[] args) {
-		Application.launch(args);
-}
+
 //starting point for the application
 //this is where we put the code for the user interface
+	//@Override
+	private Stage primaryStage;
+	private BorderPane mainLayout;
 	@Override
-	public void start(Stage stage) throws Exception {
-//The primaryStage is the top-level container
-		URL url = getClass().getResource("NewSession.fxml");
-		if (url == null) {
-		    System.out.println("No FXML file found, \"" + "NewSession.fxml" + "\"");
-		    Platform.exit();
-		    return;
+	public void start(Stage primaryStage) throws IOException {
+		try {
+			this.primaryStage = primaryStage;
+			this.primaryStage.setTitle("Activity Tracker");
+			showMainMenu();
+			showNewSession();
 		}
-		FXMLLoader loader = new FXMLLoader(url);
-		AnchorPane root = loader.<AnchorPane>load();
-	    Parent root1 = FXMLLoader.load(getClass().getResource("NewSession.fxml"));
-	    Scene scene = new Scene(root1, 400, 400);
-	    
-	    String css = activityTrackerGUI.class.getResource("application.css").toExternalForm();
-	    //Parent root1 = (Parent) root.load();
-	    scene.getStylesheets().add(css);
-	    stage.setTitle("StatsWrap");
-	   // Stage stage = new Stage();
-	   // stage.initModality(Modality.APPLICATION_MODAL);
-	   // stage.initStyle(StageStyle.UNDECORATED);
-	    //stage.setTitle("StatsWrap");
-	    stage.setScene(scene);  
-	    stage.show();
-	    
-	
-/*
-	//The BorderPane has the same areas laid out as the
-//BorderLayout layout manager
-BorderPane componentLayout = new BorderPane();
-componentLayout.setPadding(new Insets(20,0,20,20));
-//The FlowPane is a container that uses a flow layout
-final FlowPane choicePane = new FlowPane();
-choicePane.setHgap(100);
-
-vegFruitBut.setOnAction(new EventHandler() {
-@Override
-public void handle(ActionEvent event) {
-//switch the visibility for each FlowPane
-choicePane.setVisible(!choicePane.isVisible());
-listPane.setVisible(!listPane.isVisible());
-}
-});
-componentLayout.setBottom(vegFruitBut);
-//Add the BorderPane to the Scene */
-//Scene appScene = new Scene(componentLayout,500,500);
-//Add the Scene to the Stage 
-//primaryStage.setScene(appScene);
-	   
-}
+			
+		 catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+		private void showMainMenu() throws IOException {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(activityTrackerGUI.class.getResource("/MainMenu.fxml"));
+			mainLayout = loader.load();
+			Scene scene = new Scene(mainLayout);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		}
+	/*    void showNewSession(ActionEvent event) {
+from the scenenbuilder tutorial 
+	    } */
+		private void showNewSession() throws IOException {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(activityTrackerGUI.class.getResource("/NewSession.fxml"));
+			BorderPane sessionMenu = loader.load();
+			mainLayout.setCenter(sessionMenu);
+			Scene scene = new Scene(sessionMenu);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		}
+	public static void main(String[] args) {
+		Application.launch(args);
+	}
 }
