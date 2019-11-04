@@ -1,11 +1,11 @@
-package com.csci360.activitytracker.view;
+package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 
-public class newSessionController {
+public class InputDataController {
 
     @FXML
     private ResourceBundle resources;
@@ -18,4 +18,3 @@ public class newSessionController {
 
     }
 }
-

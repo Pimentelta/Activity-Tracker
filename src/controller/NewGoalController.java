@@ -1,4 +1,4 @@
-package com.csci360.activitytracker.view;
+package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
