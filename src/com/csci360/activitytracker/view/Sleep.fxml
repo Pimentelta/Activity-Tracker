@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="384.0" prefWidth="342.0" style="-fx-background-color: Gold;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <TableView layoutX="14.0" layoutY="63.0" prefHeight="322.0" prefWidth="291.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Date" />
+          <TableColumn prefWidth="75.0" text="Time Slept" />
+        </columns>
+      </TableView>
+      <Button layoutX="230.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="Back" />
+      <Text layoutX="34.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep" textAlignment="CENTER" wrappingWidth="173.13671875">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

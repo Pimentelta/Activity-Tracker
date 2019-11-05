@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="254.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="changeTimeController">
+   <children>
+      <Pane prefHeight="279.0" prefWidth="303.0" style="-fx-background-color: gold;">
+         <children>
+            <Text layoutX="80.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Time">
+               <font>
+                  <Font size="29.0" />
+               </font></Text>
+            <Text layoutX="75.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What Time Is It?" wrappingWidth="153.951171875">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <SplitMenuButton layoutX="75.0" layoutY="115.0" mnemonicParsing="false" onAction="#showTime" prefHeight="25.0" prefWidth="128.0" text="12:00">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </SplitMenuButton>
+            <Button layoutX="211.0" layoutY="187.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: lightblue;" text="OK" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

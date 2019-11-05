@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 public class MainMenuController implements Initializable{
 
@@ -40,18 +41,21 @@ public class MainMenuController implements Initializable{
     private Button ctButton;
 
     @FXML
-    void showLiveGraph(ActionEvent event) {
-
+    void showLiveGraph(ActionEvent event) throws IOException {
+    	BorderPane root = new BorderPane();
+		FXMLLoader lgLoader = new FXMLLoader(getClass().getResource("LiveGraph.fxml"));
+		lgLoader.setController(new LiveGraphController());//this works!!!
+		root.setCenter(lgLoader.load());
     }
 
     @FXML
     void showNewSession(ActionEvent event) throws IOException {
-    	System.out.println("you pressed me");//works
+    	System.out.println("Show the New Session Window!");//works
     	//BorderPane pane = new BorderPane();//broke
 		
     	FXMLLoader nsLoader = new FXMLLoader();
     	nsLoader.setLocation(getClass().getResource("NewSession.fxml"));
-    	nsLoader.setController(new newSessionController());
+    	nsLoader.setController(new NewSessionController());
     	rootPane = nsLoader.load();
     	
 		rootPane.getChildren().setAll(rootPane);//this seems to work. 
@@ -68,23 +72,38 @@ public class MainMenuController implements Initializable{
     }
 
     @FXML
-    void showSetNewGoal(ActionEvent event) {
-
+    void showSetNewGoal(ActionEvent event) throws IOException {
+    	BorderPane root = new BorderPane();
+		FXMLLoader sngLoader = new FXMLLoader(getClass().getResource("SetNewGoal.fxml"));
+		sngLoader.setController(new NewGoalController());//this works!!!
+		root.setCenter(sngLoader.load());
+		//MainMenuController menuController = menuLoader.getController();
+		
+		
     }
 
     @FXML
-    void showSleep(ActionEvent event) {
-
+    void showSleep(ActionEvent event) throws IOException {
+    	BorderPane root = new BorderPane();
+		FXMLLoader sLoader = new FXMLLoader(getClass().getResource("Sleep.fxml"));
+		sLoader.setController(new SleepController());//this works!!!
+		root.setCenter(sLoader.load());
     }
 
     @FXML
-    void showViewData(ActionEvent event) {
-
+    void showViewData(ActionEvent event) throws IOException {
+    	BorderPane root = new BorderPane();
+		FXMLLoader vdLoader = new FXMLLoader(getClass().getResource("ViewData.fxml"));
+		vdLoader.setController(new ViewDataController());//this works!!!
+		root.setCenter(vdLoader.load());
     }
 
     @FXML
-    void showChangeTime(ActionEvent event) {
-
+    void showChangeTime(ActionEvent event) throws IOException {
+    	BorderPane root = new BorderPane();
+		FXMLLoader ctLoader = new FXMLLoader(getClass().getResource("ChangeTime.fxml"));
+		ctLoader.setController(new ChangeTimeController());//this works!!!
+		root.setCenter(ctLoader.load());
     }
 
     @FXML
@@ -98,10 +117,10 @@ public class MainMenuController implements Initializable{
         assert ctButton != null : "fx:id=\"ctButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
 
         BorderPane pane = new BorderPane();//FXMLLoader(getClass().getResource("NewSession.fxml"));//currently broken
-		//FXMLLoader(getClass().getResource("MainMenu.fxml"));
+		
 		//menuLoader.setController(new MainMenuController());//this works!!!
     	FXMLLoader nsLoader = new FXMLLoader(getClass().getResource("NewSession.fxml"));
-    	nsLoader.setController(new newSessionController());
+    	nsLoader.setController(new NewSessionController());
     	pane.setCenter(nsLoader.load());
 		rootPane.getChildren().setAll(pane);//this seems to work.
     }

@@ -74,7 +74,7 @@ public class activityTrackerGUI extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("StatsWrap");
 			primaryStage.show();
-			System.out.println("There's more work to be done soldier.");
+			System.out.println("Main Menu Loaded Successfully!");
 			//showMainMenu();
 			//showNewSession();
 		

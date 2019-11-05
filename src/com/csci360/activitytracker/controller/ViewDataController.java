@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 
-public class InputDataController {
+public class ViewDataController {
 
     @FXML
     private ResourceBundle resources;
@@ -18,3 +18,4 @@ public class InputDataController {
 
     }
 }
+
