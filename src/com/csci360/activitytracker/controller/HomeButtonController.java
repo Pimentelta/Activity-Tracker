@@ -1,9 +1,5 @@
 package com.csci360.activitytracker.controller;
-import javafx.animation.*;
 import java.net.URL;
-/*import java.time.Duration;
-import java.time.LocalTime; */
-import javafx.*;
 import javafx.event.ActionEvent;
 import java.util.ResourceBundle;
 

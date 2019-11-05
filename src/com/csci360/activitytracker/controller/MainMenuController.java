@@ -1,23 +1,43 @@
 package com.csci360.activitytracker.controller;
-
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
-import javafx.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Button;
 public class MainMenuController implements Initializable{
 
-    @FXML
+	@FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
 
     @FXML
-    private AnchorPane rootPane;
+    private Button vdButton;
+
+    @FXML
+    private Button nsButton;
+
+    @FXML
+    public AnchorPane rootPane;
+
+    @FXML
+    private Button sngButton;
+
+    @FXML
+    private Button sButton;
+
+    @FXML
+    private Button lgButton;
+
+    @FXML
+    private Button ctButton;
 
     @FXML
     void showLiveGraph(ActionEvent event) {
@@ -25,8 +45,26 @@ public class MainMenuController implements Initializable{
     }
 
     @FXML
-    void showNewSession(ActionEvent event) {
-
+    void showNewSession(ActionEvent event) throws IOException {
+    	System.out.println("you pressed me");//works
+    	//BorderPane pane = new BorderPane();//broke
+		
+    	FXMLLoader nsLoader = new FXMLLoader();
+    	nsLoader.setLocation(getClass().getResource("NewSession.fxml"));
+    	nsLoader.setController(new newSessionController());
+    	rootPane = nsLoader.load();
+    	
+		rootPane.getChildren().setAll(rootPane);//this seems to work. 
+		
+		/*
+		  BorderPane root = new BorderPane();
+		//this.primaryStage.setTitle("Activity Tracker");
+		//Parent root = FXMLLoader.load(getClass().getResource("/com/csci360/activitytracker/view/MainMenu.fxml"));
+		//FXMLLoader menuLoader = new FXMLLoader(getClass().getClassLoader().getResource("src/com/csci360/activitytracker/view/MainMenu.fxml"));
+		FXMLLoader menuLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
+		menuLoader.setController(new MainMenuController());//this works!!!
+		root.setCenter(menuLoader.load());
+		*/
     }
 
     @FXML
@@ -50,9 +88,22 @@ public class MainMenuController implements Initializable{
     }
 
     @FXML
-    void initialize() {
+    void initialize() throws IOException{
+        assert vdButton != null : "fx:id=\"vdButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
+        assert nsButton != null : "fx:id=\"nsButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
         assert rootPane != null : "fx:id=\"rootPane\" was not injected: check your FXML file 'MainMenu.fxml'.";
+        assert sngButton != null : "fx:id=\"sngButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
+        assert sButton != null : "fx:id=\"sButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
+        assert lgButton != null : "fx:id=\"lgButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
+        assert ctButton != null : "fx:id=\"ctButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
 
+        BorderPane pane = new BorderPane();//FXMLLoader(getClass().getResource("NewSession.fxml"));//currently broken
+		//FXMLLoader(getClass().getResource("MainMenu.fxml"));
+		//menuLoader.setController(new MainMenuController());//this works!!!
+    	FXMLLoader nsLoader = new FXMLLoader(getClass().getResource("NewSession.fxml"));
+    	nsLoader.setController(new newSessionController());
+    	pane.setCenter(nsLoader.load());
+		rootPane.getChildren().setAll(pane);//this seems to work.
     }
 
 	@Override
