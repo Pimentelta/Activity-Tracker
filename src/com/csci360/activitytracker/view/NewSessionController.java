@@ -1,4 +1,4 @@
-package com.csci360.activitytracker.controller;
+package com.csci360.activitytracker.view;
 
 import java.io.IOException;
 import java.net.URL;

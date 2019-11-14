@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="rootPane" prefHeight="185.0" prefWidth="190.0" style="-fx-background-color: gold;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newSessionController">
+<AnchorPane fx:id="rootPane" prefHeight="185.0" prefWidth="190.0" style="-fx-background-color: gold;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewSessionController">
    <children>
       <Pane layoutY="-7.0" prefHeight="200.0" prefWidth="304.0">
          <children>
-            <Button fx:id="noButton" layoutX="22.0" layoutY="140.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="66.0" style="-fx-background-color: lightblue;" text="No">
+            <Button fx:id="noButton" layoutX="22.0" layoutY="140.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="92.0" style="-fx-background-color: lightblue;" text="Cancel">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
-            <Button fx:id="yesButton" layoutX="209.0" layoutY="140.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="66.0" style="-fx-background-color: lightblue;" text="Yes">
+            <Button fx:id="yesButton" layoutX="182.0" layoutY="140.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="107.0" style="-fx-background-color: lightblue;" text="Submit">
                <font>
                   <Font size="21.0" />
                </font>
@@ -39,7 +39,7 @@
               </items>
             </SplitMenuButton>
          </children></Pane>
-      <Text layoutX="8.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter New Session Information, then Press Yes or No " textAlignment="CENTER" wrappingWidth="295.80859375">
+      <Text layoutX="8.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter New Session Information, then Press Submit " textAlignment="CENTER" wrappingWidth="295.80859375">
          <font>
             <Font size="21.0" />
          </font></Text>

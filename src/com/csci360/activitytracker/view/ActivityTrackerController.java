@@ -1,4 +1,4 @@
-package com.csci360.activitytracker.controller;
+package com.csci360.activitytracker.view;
 
 import com.csci360.activitytracker.model.Session;
 public class ActivityTrackerController {

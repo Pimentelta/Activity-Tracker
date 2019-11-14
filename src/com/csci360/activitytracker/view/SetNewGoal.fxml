@@ -10,21 +10,27 @@
    <children>
       <Pane layoutX="-264.0" layoutY="-314.0" prefHeight="329.0" prefWidth="360.0" style="-fx-background-color: lightblue;">
          <children>
-            <TextField layoutX="98.0" layoutY="56.0" />
-            <TextField layoutX="24.0" layoutY="165.0" prefHeight="25.0" prefWidth="116.0" />
-            <TextField layoutX="182.0" layoutY="165.0" prefHeight="25.0" prefWidth="129.0" />
-            <Text layoutX="106.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What New Goal?">
+            <SplitMenuButton layoutX="103.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" text="3000">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <Text layoutX="106.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input New Goal">
                <font>
                   <Font size="18.0" />
                </font></Text>
-            <Text layoutX="128.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Timeline?">
-               <font>
-                  <Font size="18.0" />
-               </font></Text>
-            <Text layoutX="148.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+            <Text layoutX="150.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
                <font>
                   <Font size="16.0" />
                </font></Text>
+            <SplitMenuButton layoutX="103.0" layoutY="79.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" text="Steps">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </SplitMenuButton>
+            <Button layoutX="64.0" layoutY="264.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Back" />
          </children>
       </Pane>
    </children>

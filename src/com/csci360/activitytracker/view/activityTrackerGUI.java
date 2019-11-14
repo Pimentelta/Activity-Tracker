@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
-import com.csci360.activitytracker.controller.MainMenuController;
+
 import com.csci360.activitytracker.model.ActivityGraph;
 
 //import javafx.*;

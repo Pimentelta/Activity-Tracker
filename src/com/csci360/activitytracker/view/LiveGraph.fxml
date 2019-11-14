@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
@@ -19,5 +20,6 @@
         </yAxis>
       </LineChart>
       <Line endX="250.0" layoutX="300.0" layoutY="200.0" rotate="-39.8" startX="-250.0" />
+      <Button layoutX="452.0" layoutY="336.0" mnemonicParsing="false" style="-fx-background-color: gold;" text="Back" />
    </children>
 </Pane>
