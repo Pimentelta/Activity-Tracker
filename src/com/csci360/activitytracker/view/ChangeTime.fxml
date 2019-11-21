@@ -24,7 +24,7 @@
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </SplitMenuButton>
-            <Button layoutX="211.0" layoutY="187.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: lightblue;" text="OK" />
+            <Button fx:id="submitButton" layoutX="211.0" layoutY="187.0" mnemonicParsing="false" onAction="#submitPressed" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: lightblue;" text="OK" />
          </children>
       </Pane>
    </children>

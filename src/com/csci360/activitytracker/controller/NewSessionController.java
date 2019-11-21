@@ -32,8 +32,15 @@ public class NewSessionController {
     private AnchorPane rootPane;
     
     @FXML
-    void cancelPressed(ActionEvent event) {
-
+    void cancelPressed(ActionEvent event) throws IOException {
+    	Parent newSessionParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
+    	Scene newSessionScene = new Scene(newSessionParent);
+    	
+    	Stage stage = (Stage) submitButton.getScene().getWindow();
+    	
+    	stage.setScene(newSessionScene);
+    	stage.show();
+    	System.out.println("Cancel Pressed!");
     }
 
     @FXML
@@ -49,17 +56,8 @@ public class NewSessionController {
     	System.out.println("Submit changes saved successfully!");
     }
     @FXML
-    void initialize(URL location, ResourceBundle resources){
+    void initialize(){
     	// TODO Auto-generated method stub
-    	/* BorderPane pane = new BorderPane();//FXMLLoader(getClass().getResource("NewSession.fxml"));//currently broken
- 		//FXMLLoader(getClass().getResource("MainMenu.fxml"));
- 		//menuLoader.setController(new MainMenuController());//this works!!!
-     	FXMLLoader nsLoader = new FXMLLoader(getClass().getResource("NewSession.fxml"));
-     	nsLoader.setController(new newSessionController());
-     	pane.setCenter(nsLoader.load());
- 		Pane rootPane = null;
-		rootPane.getChildren().setAll(pane);//this seems to work.
-		*/
     }
  
 }

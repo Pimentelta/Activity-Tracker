@@ -83,7 +83,7 @@ public class MainMenuController implements Initializable{
     @FXML
     void showSleep(ActionEvent event) throws IOException {
     	System.out.println("Show the Sleep Window!");
-    	Parent sleepParent = FXMLLoader.load(getClass().getResource("../view/SetNewGoal.fxml"));
+    	Parent sleepParent = FXMLLoader.load(getClass().getResource("../view/Sleep.fxml"));
     	Scene sleepScene = new Scene(sleepParent);
     	
     	Stage stage = (Stage) sButton.getScene().getWindow();

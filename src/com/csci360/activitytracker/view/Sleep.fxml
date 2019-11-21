@@ -15,7 +15,7 @@
           <TableColumn prefWidth="119.0" text="Amount of Sleep" />
         </columns>
       </TableView>
-      <Button layoutX="230.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="Back" />
+      <Button fx:id="backButton" layoutX="230.0" layoutY="22.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: lightblue;" text="Back" />
       <Text layoutX="34.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep" textAlignment="CENTER" wrappingWidth="173.13671875">
          <font>
             <Font size="22.0" />

@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.NewGoalController">
+<AnchorPane prefHeight="240.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.NewGoalController">
    <children>
-      <Pane layoutX="-264.0" layoutY="-314.0" prefHeight="329.0" prefWidth="360.0" style="-fx-background-color: lightblue;">
+      <Pane prefHeight="329.0" prefWidth="360.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <SplitMenuButton layoutX="103.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" text="3000">
                <items>
@@ -30,7 +30,7 @@
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </SplitMenuButton>
-            <Button layoutX="64.0" layoutY="264.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Back" />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Back" />
          </children>
       </Pane>
    </children>
