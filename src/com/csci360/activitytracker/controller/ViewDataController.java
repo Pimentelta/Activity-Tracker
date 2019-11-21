@@ -1,4 +1,4 @@
-package com.csci360.activitytracker.view;
+package com.csci360.activitytracker.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,8 +14,9 @@ public class ViewDataController {
     private URL location;
 
     @FXML
-    void initialize() {
-
-    }
+	void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 

@@ -1,10 +1,11 @@
-package com.csci360.activitytracker.view;
+package com.csci360.activitytracker.controller;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 
-public class SleepController {
+public class NewGoalController {
 
     @FXML
     private ResourceBundle resources;
@@ -17,3 +18,4 @@ public class SleepController {
 
     }
 }
+

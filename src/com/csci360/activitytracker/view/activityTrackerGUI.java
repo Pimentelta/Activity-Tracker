@@ -4,10 +4,9 @@ package com.csci360.activitytracker.view;
 //could just import javafx.*
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import java.io.IOException;
 
 import com.csci360.activitytracker.model.ActivityGraph;
 
@@ -57,31 +56,34 @@ public class activityTrackerGUI extends Application {
 
 //starting point for the application
 //this is where we put the code for the user interface
-	//@Override
-	private Stage primaryStage;
-	private BorderPane mainLayout;
+	public Stage stage;
 	@Override
-	public void start(Stage primaryStage) throws IOException {
+	public void start(Stage stage) throws Exception {
+		System.out.println("Trying to Load Main Menu");
+		/*	
 			BorderPane root = new BorderPane();
-			this.primaryStage = primaryStage;
 			FXMLLoader menuLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
-			menuLoader.setController(new MainMenuController());//this works!!!
+			//menuLoader.setController(new MainMenuController());//this works!!!
 			root.setCenter(menuLoader.load());
 			//MainMenuController menuController = menuLoader.getController();
 			
 			
 			Scene scene = new Scene(root);
-			primaryStage.setScene(scene);
-			primaryStage.setTitle("StatsWrap");
-			primaryStage.show();
+			stage.setScene(scene);
+			stage.setTitle("StatsWrap");
+			stage.show();
 			System.out.println("Main Menu Loaded Successfully!");
-			//showMainMenu();
-			//showNewSession();
-		
+	*/
+		// From tutorial by Jaret Wright. Didn't work though** now it works...
+			Parent root = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
 			
-		/* catch(Exception e) {
-			e.printStackTrace();
-		} */
+			Scene scene = new Scene(root);
+			
+			stage.setScene(scene);
+			stage.setTitle("StatsWrap");
+			stage.show();
+			System.out.println("Main Menu Loaded Successfully!");
+			
 	}
 /*		private void showMainMenu() throws IOException {
 			FXMLLoader loader = new FXMLLoader();
@@ -102,6 +104,9 @@ public class activityTrackerGUI extends Application {
 			primaryStage.show();
 		}
 		*/
+	/**
+     * @param args the command line arguments
+     */
 	public static void main(String[] args) {
 		launch(args);
 	}
