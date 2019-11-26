@@ -11,15 +11,14 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.LiveGraphController">
    <children>
-      <LineChart layoutX="-3.0" prefHeight="400.0" prefWidth="548.0" style="-fx-background-color: lightblue;">
+      <LineChart fx:id="lineChart" layoutX="-3.0" prefHeight="400.0" prefWidth="548.0" style="-fx-background-color: lightblue;" title="Steps">
         <xAxis>
-          <CategoryAxis label="Time" side="BOTTOM" />
+          <CategoryAxis label="Time" side="BOTTOM" fx:id="xAxis" />
         </xAxis>
         <yAxis>
-          <NumberAxis label="\% of Goal Met" side="LEFT" />
+          <NumberAxis fx:id="yAxis" label="steps" side="LEFT" />
         </yAxis>
       </LineChart>
-      <Line endX="250.0" layoutX="300.0" layoutY="200.0" rotate="-39.8" startX="-250.0" />
-      <Button fx:id="backButton" layoutX="452.0" layoutY="336.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: gold;" text="Back" />
+      <Button fx:id="backButton" layoutX="476.0" layoutY="361.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: gold;" text="Back" />
    </children>
 </Pane>

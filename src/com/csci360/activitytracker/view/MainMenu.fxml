@@ -10,7 +10,7 @@
    <children>
       <Pane prefHeight="364.0" prefWidth="405.0" style="-fx-background-color: gold;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text layoutX="188.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12:45" />
+            <Label fx:id="clock" layoutX="189.0" layoutY="14.0" text="12:45:00" />
          </children>
       </Pane>
       <GridPane gridLinesVisible="true" layoutY="49.0" prefHeight="315.0" prefWidth="405.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
