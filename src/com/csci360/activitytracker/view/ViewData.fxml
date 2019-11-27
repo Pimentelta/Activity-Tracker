@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="218.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.ViewDataController">
    <children>
-      <GridPane gridLinesVisible="true" layoutY="-1.0" prefHeight="221.0" prefWidth="293.0" style="-fx-background-color: lightblue;">
+      <GridPane gridLinesVisible="true" layoutY="-1.0" prefHeight="218.0" prefWidth="232.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -19,26 +19,26 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Hyperlink prefHeight="34.0" prefWidth="147.0" text="          Steps">
+            <Hyperlink fx:id="backButton" onAction="#backPressed" prefHeight="100.0" prefWidth="116.0" style="-fx-background-color: gold;" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Hyperlink>
-            <Hyperlink prefHeight="23.0" prefWidth="142.0" text="      Heartrate" GridPane.columnIndex="1">
+            <Label fx:id="stepsTaken" prefHeight="100.0" prefWidth="151.0" text="Steps: ">
                <font>
                   <Font size="18.0" />
                </font>
-            </Hyperlink>
-            <Hyperlink prefHeight="49.0" prefWidth="147.0" text="     Your Data" GridPane.rowIndex="1">
+            </Label>
+            <Label fx:id="heartbeat" prefHeight="104.0" prefWidth="144.0" text="Heartrate: " GridPane.columnIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
-            </Hyperlink>
-            <Hyperlink fx:id="backButton" onAction="#backPressed" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: gold;" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            </Label>
+            <Label fx:id="calories" prefHeight="105.0" prefWidth="146.0" text="Calories Burned: " GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
-            </Hyperlink>
+            </Label>
          </children>
       </GridPane>
    </children>

@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Clock;
+import java.time.Instant;
+import java.util.Date;
 //import java.time.Duration;
 import java.util.ResourceBundle;
 
@@ -25,6 +28,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Labeled;
 public class MainMenuController implements Initializable{
 
 	@FXML
@@ -155,24 +159,41 @@ public class MainMenuController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		long endTime = 10000;
-		//Label clock = new Label();
-		DateFormat timeFormat = new SimpleDateFormat( "HH:mm:ss" );
-		final Timeline timeline = new Timeline(
-		    new KeyFrame(
-		        Duration.millis( 500 ),
-		        event -> {
-		            final long diff = endTime - System.currentTimeMillis();
-		            if ( diff < 0 ) {
-		            //  timeLabel.setText( "00:00:00" );
-		                clock.setText( timeFormat.format( 0 ) );
-		            } else {
-		                clock.setText( timeFormat.format( diff ) );
-		            }
-		        }
-		    )
-		);
-		timeline.setCycleCount(Animation.INDEFINITE);
-		timeline.play();
+//		long endTime = 10000;
+//		//Label clock = new Label();
+//		DateFormat timeFormat = new SimpleDateFormat( "HH:mm:ss" );
+//		final Timeline timeline = new Timeline(
+//		    new KeyFrame(
+//		        Duration.millis( 500 ),
+//		        event -> {
+//		            final long diff = endTime - System.currentTimeMillis();
+//		            if ( diff < 0 ) {
+//		            //  timeLabel.setText( "00:00:00" );
+//		                clock.setText( timeFormat.format( 0 ) );
+//		            } else {
+//		                clock.setText( timeFormat.format( diff ) );
+//		            }
+//		        }
+//		    )
+//		);
+//		timeline.setCycleCount(Animation.INDEFINITE);
+//		timeline.play();
+		//different attempt
+//		Clock clock2 = Clock.systemDefaultZone();
+//		Instant instant = clock2.instant();
+//		System.out.println(instant);
+		
+		DateFormat dateFormat2 = new SimpleDateFormat("dd/MM/yyyy hh:mm aa");//17 and 18 are am/pm
+    	String dateString2 = dateFormat2.format(new Date()).toString();
+    	System.out.println("Current date and time in AM/PM: "+dateString2);
+    	int newTime = dateString2.charAt(11)+dateString2.charAt(12);
+    	newTime = 7;
+    	StringBuilder time = new StringBuilder(dateString2);
+    	time.setCharAt(12, (char)(newTime));//ends up with a question mark 
+    	//dateString2[11] = newTime;//(dateString2[0-10]+newTime+dateString2[13-18]);
+    	clock.setText(dateString2);
+    	System.out.println("Current hour "+dateString2.charAt(11)+dateString2.charAt(12));
+    	System.out.println("new time: " + time);
+    	
 	}
 }

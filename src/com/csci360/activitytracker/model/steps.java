@@ -4,34 +4,18 @@ public class steps {
 	public static int[] stepsArray = new int[50];
 	public static int count = 0;
 	
-	public int[] getArray() {
-		for (int i = 0; i < 50; i++) {
-			addSteps(rng());
-		}
-		for (int i = 0; i < 50; i++) {
-			System.out.println(stepsArray[i]);
-		}
-		return stepsArray;
-	}
 	
 	public static int rng() {
 		return (int) ((Math.random()*(100 - 1)));
 	}
 	
-	public static void addSteps(int steps) {
-		try {
-			stepsArray[count] =  stepsArray[count-1]+steps;
-			count++;
+	public static int[] addSteps(int steps) {
+		int[] stepCounter = new int[steps];
+		stepCounter[0]= 0;
+		for (int i = 1; i < steps; i++) {
+			stepCounter[i] = stepCounter[i-1]+rng();
 		}
-		catch(Exception e){
-			stepsArray[count]=steps;
-			count++;
-		}
+		return stepCounter;
 	}
-		
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
+		

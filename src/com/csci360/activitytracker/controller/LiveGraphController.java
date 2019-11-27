@@ -63,7 +63,7 @@ public class LiveGraphController {
     	}
     	
     static steps stepEx = new steps();
-	static int[] stepsArr = stepEx.getArray();
+	static int[] stepsArr = steps.getSteps();
 	
     @SuppressWarnings("unchecked")
 	static void setup() {

@@ -31,6 +31,7 @@
               </items>
             </SplitMenuButton>
             <Button fx:id="backButton" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Back" />
+            <Button fx:id="cionfirmButton" layoutX="207.0" layoutY="190.0" mnemonicParsing="false" onAction="#confirmPressed" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Confirm" />
          </children>
       </Pane>
    </children>
