@@ -1,5 +1,5 @@
 package com.csci360.activitytracker.controller;
-
+import com.csci360.activitytracker.model.Person;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,7 +19,8 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class ViewDataController {
-
+	//public static int goal=0;
+	 
     @FXML
     private ResourceBundle resources;
 
@@ -34,6 +35,9 @@ public class ViewDataController {
 
     @FXML
     private Label stepsTaken;
+    
+    @FXML
+    private Label goalMet;
 
     @FXML
     private Label calories;
@@ -56,10 +60,11 @@ public class ViewDataController {
         assert backButton != null : "fx:id=\"backButton\" was not injected: check your FXML file 'ViewData.fxml'.";
         assert stepsTaken != null : "fx:id=\"stepsTaken\" was not injected: check your FXML file 'ViewData.fxml'.";
         assert calories != null : "fx:id=\"calories\" was not injected: check your FXML file 'ViewData.fxml'.";
-        
+       
         HeartRate heartsim = new HeartRate();
         steps stpsview = new steps();
-        Calories calorie = new Calories();
+       Calories calorie = new Calories();
+      //Person p = new Person();
         int[] temp = heartsim.hrLog(10);
         int[]temp2 = stpsview.addSteps(10);
         for(int i=0; i<temp.length;i++) {
@@ -74,7 +79,8 @@ public class ViewDataController {
         		
         		
         		stepsTaken.setText("Steps: " + temp2[temp2.length-1]);
-        		//calories.setText("Calories Burned: " + String.valueOf(calorie.caloriesBurned(stpsview.getSteps()[stpsview.getSteps().length-1])));
+        		goalMet.setText("% of Goal Met: " + String.valueOf((temp2[temp2.length-1])/(Person.getGoal())));
+        		calories.setText("Calories Burned: " + String.valueOf(calorie.caloriesBurned(temp2[temp2.length-1])));
         }
        // heartsim.updateHR(heartsim.rng());
       //  heartbeat.setText("HeartRate: " + get);

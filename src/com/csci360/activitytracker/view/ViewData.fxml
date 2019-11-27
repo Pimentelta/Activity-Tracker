@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="218.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.ViewDataController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.ViewDataController">
    <children>
       <GridPane gridLinesVisible="true" layoutY="-1.0" prefHeight="218.0" prefWidth="232.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -19,22 +19,27 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Hyperlink fx:id="backButton" onAction="#backPressed" prefHeight="100.0" prefWidth="116.0" style="-fx-background-color: gold;" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Hyperlink fx:id="backButton" alignment="CENTER" contentDisplay="BOTTOM" onAction="#backPressed" prefHeight="196.0" prefWidth="300.0" style="-fx-background-color: gold;" text="Back" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Hyperlink>
-            <Label fx:id="stepsTaken" prefHeight="100.0" prefWidth="151.0" text="Steps: ">
+            <Label fx:id="stepsTaken" alignment="BOTTOM_LEFT" prefHeight="92.0" prefWidth="298.0" text="\% of Goal Met: ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="heartbeat" prefHeight="104.0" prefWidth="144.0" text="Heartrate: " GridPane.columnIndex="1">
+            <Label fx:id="heartbeat" prefHeight="199.0" prefWidth="297.0" text="Heartrate: " GridPane.columnIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="calories" prefHeight="105.0" prefWidth="146.0" text="Calories Burned: " GridPane.rowIndex="1">
+            <Label fx:id="calories" prefHeight="195.0" prefWidth="297.0" text="Calories Burned: " GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="goalMet" alignment="TOP_LEFT" prefHeight="105.0" prefWidth="298.0" text="Steps: ">
                <font>
                   <Font size="18.0" />
                </font>

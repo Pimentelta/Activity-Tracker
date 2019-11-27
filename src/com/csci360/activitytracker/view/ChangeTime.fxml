@@ -6,25 +6,22 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="254.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.ChangeTimeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.ChangeTimeController">
    <children>
-      <Pane prefHeight="279.0" prefWidth="303.0" style="-fx-background-color: gold;">
+      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: gold;">
          <children>
-            <Text layoutX="80.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Time">
+            <Text layoutX="216.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Time">
                <font>
                   <Font size="29.0" />
                </font></Text>
-            <Text layoutX="75.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What Time Is It?" wrappingWidth="153.951171875">
+            <Text layoutX="235.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What Time Is It?" wrappingWidth="153.951171875">
                <font>
                   <Font size="18.0" />
                </font></Text>
-            <SplitMenuButton layoutX="75.0" layoutY="115.0" mnemonicParsing="false" onAction="#showTime" prefHeight="25.0" prefWidth="128.0" text="12:00">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </SplitMenuButton>
-            <Button fx:id="submitButton" layoutX="211.0" layoutY="187.0" mnemonicParsing="false" onAction="#submitPressed" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: lightblue;" text="OK" />
+            <Button fx:id="submitButton" layoutX="399.0" layoutY="293.0" mnemonicParsing="false" onAction="#submitPressed" prefHeight="59.0" prefWidth="135.0" style="-fx-background-color: lightblue;" text="Submit" />
+            <Button fx:id="backButton" layoutX="45.0" layoutY="294.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="59.0" prefWidth="154.0" style="-fx-background-color: lightblue;" text="Cancel" />
+            <ComboBox fx:id="time" layoutX="85.0" layoutY="114.0" prefWidth="150.0" promptText="12:00" />
+            <ComboBox fx:id="mtime" layoutX="412.0" layoutY="114.0" prefHeight="25.0" prefWidth="71.0" promptText="PM" />
          </children>
       </Pane>
    </children>

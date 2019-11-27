@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.LiveGraphController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.LiveGraphController">
    <children>
       <LineChart fx:id="lineChart" layoutX="-3.0" prefHeight="400.0" prefWidth="548.0" style="-fx-background-color: lightblue;" title="Steps">
         <xAxis>
@@ -19,6 +19,6 @@
           <NumberAxis fx:id="yAxis" label="steps" side="LEFT" />
         </yAxis>
       </LineChart>
-      <Button fx:id="backButton" layoutX="476.0" layoutY="361.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: gold;" text="Back" />
+      <Button fx:id="backButton" layoutX="545.0" layoutY="361.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: gold;" text="Back" />
    </children>
 </Pane>

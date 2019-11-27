@@ -7,16 +7,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="384.0" prefWidth="342.0" style="-fx-background-color: Gold;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.SleepController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Gold;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.SleepController">
    <children>
-      <TableView layoutX="14.0" layoutY="63.0" prefHeight="322.0" prefWidth="291.0">
+      <TableView fx:id="table" layoutX="14.0" layoutY="63.0" prefHeight="322.0" prefWidth="509.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Date" />
-          <TableColumn prefWidth="119.0" text="Amount of Sleep" />
+          <TableColumn fx:id="date" prefWidth="154.0" text="Date" />
+          <TableColumn fx:id="sleep" prefWidth="217.0" text="Amount of Sleep" />
+            <TableColumn fx:id="tsleep" prefWidth="137.0" text="Type of Sleep" />
         </columns>
       </TableView>
-      <Button fx:id="backButton" layoutX="230.0" layoutY="22.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: lightblue;" text="Back" />
-      <Text layoutX="34.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep" textAlignment="CENTER" wrappingWidth="173.13671875">
+      <Button fx:id="backButton" layoutX="545.0" layoutY="360.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: lightblue;" text="Back" />
+      <Text layoutX="213.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep" textAlignment="CENTER" wrappingWidth="173.13671875">
          <font>
             <Font size="22.0" />
          </font>

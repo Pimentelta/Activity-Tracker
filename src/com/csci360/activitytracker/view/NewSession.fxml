@@ -6,42 +6,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="rootPane" prefHeight="185.0" prefWidth="190.0" style="-fx-background-color: gold;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.NewSessionController">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: gold;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.NewSessionController">
    <children>
-      <Pane layoutY="-7.0" prefHeight="200.0" prefWidth="304.0">
+      <Pane layoutY="-7.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="cancelButton" layoutX="22.0" layoutY="140.0" mnemonicParsing="false" onAction="#cancelPressed" prefHeight="46.0" prefWidth="92.0" style="-fx-background-color: lightblue;" text="Cancel">
+            <Button fx:id="cancelButton" layoutX="27.0" layoutY="330.0" mnemonicParsing="false" onAction="#cancelPressed" prefHeight="46.0" prefWidth="92.0" style="-fx-background-color: lightblue;" text="Cancel">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
-            <Button fx:id="submitButton" layoutX="182.0" layoutY="140.0" mnemonicParsing="false" onAction="#submitPressed" prefHeight="46.0" prefWidth="107.0" style="-fx-background-color: lightblue;" text="Submit">
+            <Button fx:id="submitButton" layoutX="480.0" layoutY="330.0" mnemonicParsing="false" onAction="#submitPressed" prefHeight="46.0" prefWidth="107.0" style="-fx-background-color: lightblue;" text="Submit">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
-            <SplitMenuButton layoutX="49.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Age">
-              <items>
-                <MenuItem mnemonicParsing="false" text="20" />
-                <MenuItem mnemonicParsing="false" text="25" />
-              </items>
-            </SplitMenuButton>
-            <SplitMenuButton layoutX="156.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Weight">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </SplitMenuButton>
-            <SplitMenuButton layoutX="79.0" layoutY="109.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" text="Goal: ">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </SplitMenuButton>
+            <Text layoutX="152.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter New Session Information, then Press Submit " textAlignment="CENTER" wrappingWidth="295.80859375">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="age" layoutX="102.0" layoutY="100.0" prefHeight="25.0" prefWidth="79.0" promptText="Age" />
+            <ComboBox fx:id="weight" layoutX="224.0" layoutY="100.0" prefHeight="25.0" prefWidth="92.0" promptText="Weight" />
+            <ComboBox fx:id="height" layoutX="363.0" layoutY="100.0" prefHeight="25.0" prefWidth="136.0" promptText="Height" />
          </children></Pane>
-      <Text layoutX="8.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter New Session Information, then Press Submit " textAlignment="CENTER" wrappingWidth="295.80859375">
-         <font>
-            <Font size="21.0" />
-         </font></Text>
    </children>
 </AnchorPane>

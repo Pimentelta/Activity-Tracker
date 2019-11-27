@@ -6,32 +6,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="240.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.NewGoalController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci360.activitytracker.controller.NewGoalController">
    <children>
-      <Pane prefHeight="329.0" prefWidth="360.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <SplitMenuButton layoutX="103.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" text="3000">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </SplitMenuButton>
-            <Text layoutX="106.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input New Goal">
+            <Text layoutX="238.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input New Goal">
                <font>
                   <Font size="18.0" />
                </font></Text>
-            <Text layoutX="150.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+            <Text layoutX="362.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
                <font>
                   <Font size="16.0" />
                </font></Text>
-            <SplitMenuButton layoutX="103.0" layoutY="79.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="148.0" text="Steps">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </SplitMenuButton>
-            <Button fx:id="backButton" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Back" />
-            <Button fx:id="cionfirmButton" layoutX="207.0" layoutY="190.0" mnemonicParsing="false" onAction="#confirmPressed" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Confirm" />
+            <Button fx:id="backButton" layoutX="73.0" layoutY="309.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Back" />
+            <Button fx:id="confirmButton" layoutX="460.0" layoutY="309.0" mnemonicParsing="false" onAction="#confirmPressed" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: gold;" text="Confirm" />
+            <Text layoutX="142.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="goal" layoutX="101.0" layoutY="106.0" prefWidth="150.0" promptText="Steps" />
+            <ComboBox fx:id="amount" layoutX="321.0" layoutY="106.0" prefWidth="150.0" promptText="1000" />
          </children>
       </Pane>
    </children>
