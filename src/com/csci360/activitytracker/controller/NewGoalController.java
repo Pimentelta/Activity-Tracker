@@ -68,7 +68,7 @@ public class NewGoalController {
         assert goal != null : "fx:id=\"goal\" was not injected: check your FXML file 'SetNewGoal.fxml'.";
         assert confirmButton != null : "fx:id=\"confirmButton\" was not injected: check your FXML file 'SetNewGoal.fxml'.";
         
-        Person p = new Person();
+        Person p = Person.getPerson();
         amount.getItems().setAll("1000", "2000", "3000","4000","5000", "6000", "7000","8000", "9000", "10000");
         goal.getItems().setAll("Steps", "Calories");
      // bind the selected fruit label to the selected fruit in the combo box.

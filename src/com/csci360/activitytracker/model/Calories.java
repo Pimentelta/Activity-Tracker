@@ -1,9 +1,9 @@
 package com.csci360.activitytracker.model;
 import java.lang.Math;
 public class Calories {
-	private int weight = Person.getWeight();
-	private int height = Person.getHeight();
-	private int age=Person.getAge();
+	private int weight = Person.getPerson().getWeight();
+	private int height = Person.getPerson().getHeight();
+	private int age= Person.getPerson().getAge();
 	
 	//  height(inches)*.42=stride(inches)
 	//  stride*steps = distance traveled in inches
@@ -12,7 +12,7 @@ public class Calories {
 	//  miles*cal/mile = calories burned
 	// math.floor(val*100)/100 to round two the hundredth place
 	
-	public double caloriesBurned(int steps) {
+	public double caloriesBurned(int steps) throws Exception {
 //		double stride = height*.42;
 //		double distIn = steps * stride;
 //		double distMi = distIn/(12*5280);
@@ -28,7 +28,7 @@ public class Calories {
 		   return Math.floor(metScore * kg * tExer);
 		 */
 		//BMR method 
-		   return Math.floor(66 + (6.2 * weight) + (12.7 * height) - (6.76 * age) * ((Math.random()*(1.6 - 0.9)) + 0.9)); //double
+		   return Math.floor(66 +  (steps/240) * (6.2 * weight) + (12.7 * height) - (6.76 * age) *((Math.random()*(1.6 - 0.9)) + 0.9)); //double
 		//return  Math.floor(((height*.42*steps)/(12*5280)*.53*weight)*100)/100;
 		//return 10*weight*
 	}
@@ -44,11 +44,3 @@ public class Calories {
 	
 	
 }
-
-
-//FOR--TINO--TINO--TINO--TINO--TINO READ ME PLEASE
-//Remove this before turning in
-//Height in inches and weight in lbs are currently hardcoded at the top
-//They instead need to be passed based on the users height and weight
-//the commented section in caloriesburned is the same thing as the uncommented
-//the comments above the method explain whats going on in the method

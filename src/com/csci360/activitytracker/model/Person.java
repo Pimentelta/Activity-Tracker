@@ -1,58 +1,47 @@
 package com.csci360.activitytracker.model;
 
-import javafx.beans.property.StringProperty;
-
 public class Person {
 	public static int goal = 1000;
 	public static int age =20;
 	public static int weight = 100;
 	public static int height = 49;
-	//protected StringProperty name;
-	public static Person[] pList;
-	/*public Person (String name) //creates a person with a name.
-	{
-		this.name.set(name);
-	}
-
-	public String getName() {
-		return name.get();
-	}
-
-	public void setName(String name) {
-		this.name.set(name);
-	}
+	private static Person user = new Person();
 	
-	 public StringProperty getNameProperty() {
-		 return name;
-	 }*/
+	//public static Person[] pList;
+	private Person() {}
+	public static synchronized Person getPerson() {
+		if(user ==null) user = new Person();
+		return user;
+		}
+	
 	 public static int getGoal() {
 			return Person.goal;
 		}
 	 public static void setGoal(int newG) {
 		 Person.goal = newG;
 	 }
-	 public static void addPerson(Person p) {
-		 pList[0]=p;
-	 }
-	 public Person getPerson() {
-		 return pList[0];
-	 }
+//	 public static void addPerson(Person p) {
+//		 pList[0]=p;
+//	 }
+//	 public Person getPerson() {
+//		 return pList[0];
+//	 }
 	 public static int getHeight() {
-			return Person.height;
+			return height;
 		}
 	 public static void setHeight(int newH) {
-		 Person.height = newH;
+		 height = newH;
 	 }
 	 public static int getWeight() {
-			return Person.height;
+			return weight;
 		}
 	 public static void setWeight(int newW) {
-		 Person.weight = newW;
+		 weight = newW;
 	 }
 	 public static int getAge() {
-			return Person.height;
+			return age;
 		}
 	 public static void setAge(int newA) {
-		 Person.age = newA;
+		 age = newA;
 	 }
 }

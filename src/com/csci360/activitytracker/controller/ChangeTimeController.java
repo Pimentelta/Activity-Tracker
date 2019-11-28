@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.csci360.activitytracker.model.PTime;
 import com.csci360.activitytracker.model.Person;
 
 import javafx.beans.value.ChangeListener;
@@ -81,7 +82,7 @@ public class ChangeTimeController {
      // bind the selected fruit label to the selected fruit in the combo box.
         //selectedFruit.textProperty().bind(amount.getSelectionModel().selectedItemProperty());
 
-        // listen for changes to the amount combo box selection and update something accordingly.
+        // listen for changes to the amount combo box selection and updates the time accordingly.
         time.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
          
         	@SuppressWarnings({ "static-access", "static-access", "static-access", "static-access" })
@@ -89,64 +90,65 @@ public class ChangeTimeController {
           public void changed(ObservableValue<? extends String> selected, String oldSelection, String newSelection) {
             if (oldSelection != null) {
               switch(oldSelection) {
-                case "01:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "02:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "03:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "04:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "05:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "06:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "07:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "08:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "09:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "10:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "11:00": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "12:00": Person.setAge(Integer.parseInt(oldSelection)); break;
+                case "01:00": PTime.setHour(oldSelection); break;
+                case "02:00": PTime.setHour(oldSelection); break;
+                case "03:00": PTime.setHour(oldSelection); break;
+                case "04:00": PTime.setHour(oldSelection); break;
+                case "05:00": PTime.setHour(oldSelection); break;
+                case "06:00": PTime.setHour(oldSelection); break;
+                case "07:00": PTime.setHour(oldSelection); break;
+                case "08:00": PTime.setHour(oldSelection); break;
+                case "09:00": PTime.setHour(oldSelection); break;
+                case "10:00": PTime.setHour(oldSelection); break;
+                case "11:00": PTime.setHour(oldSelection); break;
+                case "12:00": PTime.setHour(oldSelection); break;
+                //case "12:00": PTime.setHour(Integer.parseInt(oldSelection)); break;
 
               }
             }
             if (newSelection != null) {
               switch(newSelection) {
-                case "01:00": Person.setAge(20); break;
-                case "02:00": Person.setAge(21); break;
-                case "03:00": Person.setAge(22); break;
-                case "04:00": Person.setAge(23); break;
-                case "05:00": Person.setAge(24); break;
-                case "06:00": Person.setAge(25); break;
-                case "07:00": Person.setAge(26); break;
-                case "08:00": Person.setAge(27); break;
-                case "09:00": Person.setAge(28); break;
-                case "10:00": Person.setAge(29); break;
-                case "11:00": Person.setAge(30); break;
-                case "12:00": Person.setAge(30); break;
+                case "01:00": PTime.setHour("01:00"); break;
+                case "02:00": PTime.setHour("02:00"); break;
+                case "03:00": PTime.setHour("03:00"); break;
+                case "04:00": PTime.setHour("04:00"); break;
+                case "05:00": PTime.setHour("05:00"); break;
+                case "06:00": PTime.setHour("06:00"); break;
+                case "07:00": PTime.setHour("07:00"); break;
+                case "08:00": PTime.setHour("08:00"); break;
+                case "09:00": PTime.setHour("09:00"); break;
+                case "10:00": PTime.setHour("10:00"); break;
+                case "11:00": PTime.setHour("11:00"); break;
+                case "12:00": PTime.setHour("12:00"); break;
+                
+               // case "12:00": PTime.setHour(12); break;
               }
             }
-        System.out.println("New Time should be: " + Person.getAge());
-    
-    
+        System.out.println("New Time should be: " + PTime.getHour());
     
     }
  
 }
         );
-        time.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+        mtime.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             
         	@SuppressWarnings({ "static-access", "static-access", "static-access", "static-access" })
 			@Override 
           public void changed(ObservableValue<? extends String> selected, String oldSelection, String newSelection) {
             if (oldSelection != null) {
               switch(oldSelection) {
-                case "AM": Person.setAge(Integer.parseInt(oldSelection)); break;
-                case "PM": Person.setAge(Integer.parseInt(oldSelection)); break;
+                case "AM": PTime.setMeridian(oldSelection); break;
+                case "PM": PTime.setMeridian(oldSelection); break;
                
 
               }
             }
             if (newSelection != null) {
               switch(newSelection) {
-                case "AM": Person.setAge(20); break;
-                case "PM": Person.setAge(21); break;
+                case "AM": PTime.setMeridian("AM"); break;
+                case "PM": PTime.setMeridian("PM"); break;
               }}
-            System.out.println("New Meridian should be: " + Person.getAge());
+            System.out.println("New Meridian should be: " + PTime.getMeridian());
             
             
             
