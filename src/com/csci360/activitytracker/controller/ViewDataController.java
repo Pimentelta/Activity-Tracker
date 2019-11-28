@@ -9,7 +9,6 @@ import com.csci360.activitytracker.model.Calories;
 import com.csci360.activitytracker.model.HeartRate;
 import com.csci360.activitytracker.model.steps;
 
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,6 +42,9 @@ public class ViewDataController {
     @FXML
     private Label calories;
 
+    /*
+     * When the back button is pressed. Go back to the main menu
+     */
     @FXML
     void backPressed(ActionEvent event) throws IOException {
     	Parent viewDataParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
@@ -66,10 +68,11 @@ public class ViewDataController {
        steps stpsview = new steps();
        Calories calorie = new Calories();
        Person p = Person.getPerson();
-      //Person p = new Person();
+      //The heartbeat and steps simulator is ran here with an amount set to 10 minutes
         int[] temp = heartsim.hrLog(10);
         int[] temp2 = steps.addSteps(10);
        // heartbeat.textProperty().bind(new SimpleIntegerProperty(temp[i]).asString());
+        // The steps taken, heartrate, and calories burned should be updating in real time while simulated.
         for(int i=0; i<temp.length;i++) {
         	TimeUnit.SECONDS.sleep(1); //makes the system wait before running any calculations
         	temp[i] = heartsim.average();
@@ -78,7 +81,7 @@ public class ViewDataController {
         		
         		stepsTaken.setText("Steps: " + temp2[i]);
         		
-        		goalMet.setText("% of Goal Met: " + String.valueOf(Math.ceil((double) temp2[temp2.length-1]/(double) (p.getGoal()))));
+        		goalMet.setText("% of Goal Met: " + String.valueOf((double) temp2[temp2.length-1]/(double) (p.getGoal())));
         		
         		System.out.println("Goal: " + String.valueOf(Person.getGoal())+ " --- Steps taken: " +
         							String.valueOf(temp2[i]) + " --- Calories Burned " + 

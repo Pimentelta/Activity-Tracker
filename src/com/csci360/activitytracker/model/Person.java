@@ -1,13 +1,14 @@
 package com.csci360.activitytracker.model;
-
+/*
+ * Uses a singleton design pattern to keep track of the users goal, age, weight, and height
+ */
 public class Person {
 	public static int goal = 1000;
 	public static int age =20;
 	public static int weight = 100;
 	public static int height = 49;
-	private static Person user = new Person();
+	private static Person user = new Person(); //singleton pattern from GoF
 	
-	//public static Person[] pList;
 	private Person() {}
 	public static synchronized Person getPerson() {
 		if(user ==null) user = new Person();
@@ -20,12 +21,7 @@ public class Person {
 	 public static void setGoal(int newG) {
 		 Person.goal = newG;
 	 }
-//	 public static void addPerson(Person p) {
-//		 pList[0]=p;
-//	 }
-//	 public Person getPerson() {
-//		 return pList[0];
-//	 }
+
 	 public static int getHeight() {
 			return height;
 		}

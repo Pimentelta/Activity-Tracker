@@ -44,6 +44,9 @@ public class LiveGraphController {
     private static double xval =0;
     
     public static double incrementer=0.0;
+    /*
+     * When the back button is pressed. Go back to the main menu
+     */
     @FXML
     void backPressed(ActionEvent event) throws IOException {
     	Parent liveGraphParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
@@ -58,8 +61,6 @@ public class LiveGraphController {
     }
     static void updateGraph(double xval, double data) throws InterruptedException {
     		series.getData().add(new XYChart.Data<>(xval, data));
-  
-    		
     	}
     	
     static steps stepEx = new steps();
@@ -81,39 +82,25 @@ public class LiveGraphController {
     	XYChart.Series series = new XYChart.Series();
     	series.setName("Steps taken");
     
-    	for( int i = 0; i <50; i++) {
+    	for( int i = 0; i <5; i++) {
     		series.getData().add(new XYChart.Data(i, stepsArr[i]));
     	lineChart.getData().add(series);
     	
     	}
     	Scene scene = new Scene(lineChart,800,600);
     	lineChart.getData().add(series);
-    	
+    	Stage stage = new Stage(); stage.setScene(scene);
     	
     	
     }
     public void start(Stage stage) throws Exception{
-    	
+    	setup();
     }
-//    static double rng() throws InterruptedException {
-//    	TimeUnit.SECONDS.sleep(3);
-//    	xval++;
-//    	return Math.random()*(100-0);
-//    }
-    
-//    	static void main(String[]args) throws InterruptedException {
-//    		setup();
-//    		for(int i = 0; i<10;i++) {
-//    			double tempData = rng();
-//    			incrementer = incrementer + tempData;
-//    			updateGraph(i, tempData);
-//    		}
-//    		
-//    	}
+
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	@FXML
-    void initialize() {
+    void initialize() throws Exception {
         assert backButton != null : "fx:id=\"backButton\" was not injected: check your FXML file 'LiveGraph.fxml'.";
         /*XYChart.Series series = new XYChart.Series<>();
         
@@ -122,5 +109,7 @@ public class LiveGraphController {
         
         linechart.getData().addAll(series);
         */
+        
+        //setup();
     }
 }

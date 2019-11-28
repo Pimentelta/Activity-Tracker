@@ -49,6 +49,9 @@ public class SleepController {
     @FXML
     private Label rsleep;
 
+    /*
+     * When the back button is pressed. Go back to the main menu
+     */
     @FXML
     void backPressed(ActionEvent event) throws IOException {
     	Parent sleepParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
@@ -81,7 +84,7 @@ public class SleepController {
     	);
     */
         //sleep s = sleep.getSleep();
-        String[] data = sleep.generateSleep(60); //generates 60 minutes of sleep
+        String[] data = sleep.generateSleep(60); //generates 60 minutes of sleep everytime sleep mode is pressed. 
         rsleep.setText(data[0]);
         dsleep.setText(data[1]);
         lsleep.setText(data[2]);

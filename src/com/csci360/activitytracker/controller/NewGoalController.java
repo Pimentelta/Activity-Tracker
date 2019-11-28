@@ -35,7 +35,9 @@ public class NewGoalController {
     @FXML
     private Button confirmButton;
 
-
+    /*
+     * When the back button is pressed. Go back to the main menu
+     */
     @FXML
     void backPressed(ActionEvent event) throws IOException {
     	Parent newGoalParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
@@ -47,7 +49,9 @@ public class NewGoalController {
     	stage.show();
     	System.out.println("Back Button Pressed!");
     }
-    
+    /*
+     * When the submit button is pressed. Go back to the main menu
+     */
     @FXML
     void confirmPressed(ActionEvent event) throws IOException {
     	Parent newGoalParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
@@ -74,7 +78,7 @@ public class NewGoalController {
      // bind the selected fruit label to the selected fruit in the combo box.
         //selectedFruit.textProperty().bind(amount.getSelectionModel().selectedItemProperty());
 
-        // listen for changes to the amount combo box selection and update something accordingly.
+        // listen for changes to the amount combo box selection and updates the users goal accordingly.
         amount.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
          
         	@Override 

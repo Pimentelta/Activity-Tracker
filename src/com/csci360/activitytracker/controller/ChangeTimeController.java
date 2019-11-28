@@ -45,7 +45,9 @@ public class ChangeTimeController {
     void showM(ActionEvent event) throws IOException {
     	
     }
-
+    /*
+     * When the submit button is pressed. Go back to the main menu
+     */
     @FXML
     void submitPressed(ActionEvent event) throws IOException {
     	System.out.println("Submit Pressed!");
@@ -58,8 +60,13 @@ public class ChangeTimeController {
     	stage.show();
     	System.out.println("New Time Set!");
     }
+    /*
+     * When the back button is pressed. Go back to the main menu
+     */
     @FXML
     void backPressed(ActionEvent event) throws IOException {
+    	PTime.changed = false; //Guarantees that the time will not be changed. 
+    	PTime.changed2 = false;
     	System.out.println("Cancel Pressed!");
     	Parent changeTimeParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
     	Scene changeTimeScene = new Scene(changeTimeParent);
@@ -102,7 +109,6 @@ public class ChangeTimeController {
                 case "10:00": PTime.setHour(oldSelection); break;
                 case "11:00": PTime.setHour(oldSelection); break;
                 case "12:00": PTime.setHour(oldSelection); break;
-                //case "12:00": PTime.setHour(Integer.parseInt(oldSelection)); break;
 
               }
             }
@@ -124,7 +130,7 @@ public class ChangeTimeController {
                // case "12:00": PTime.setHour(12); break;
               }
             }
-        System.out.println("New Time should be: " + PTime.getHour());
+        System.out.println("New Time should be: " + PTime.getTime());
     
     }
  

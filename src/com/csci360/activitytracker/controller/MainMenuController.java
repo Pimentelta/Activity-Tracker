@@ -16,6 +16,7 @@ import com.csci360.activitytracker.model.steps;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -160,42 +161,15 @@ public class MainMenuController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-//		long endTime = 10000;
-//		//Label clock = new Label();
-//		DateFormat timeFormat = new SimpleDateFormat( "HH:mm:ss" );
-//		final Timeline timeline = new Timeline(
-//		    new KeyFrame(
-//		        Duration.millis( 500 ),
-//		        event -> {
-//		            final long diff = endTime - System.currentTimeMillis();
-//		            if ( diff < 0 ) {
-//		            //  timeLabel.setText( "00:00:00" );
-//		                clock.setText( timeFormat.format( 0 ) );
-//		            } else {
-//		                clock.setText( timeFormat.format( diff ) );
-//		            }
-//		        }
-//		    )
-//		);
-//		timeline.setCycleCount(Animation.INDEFINITE);
-//		timeline.play();
-		//different attempt
-//		Clock clock2 = Clock.systemDefaultZone();
-//		Instant instant = clock2.instant();
-//		System.out.println(instant);
+//		
 		/*
-		DateFormat dateFormat2 = new SimpleDateFormat("dd/MM/yyyy hh:mm aa");//17 and 18 are am/pm
-    	String dateString2 = dateFormat2.format(new Date()).toString();
-    	System.out.println("Current date and time in AM/PM: "+dateString2);
-    	int newTime = dateString2.charAt(11)+dateString2.charAt(12);
-    	newTime = 7;
-    	StringBuilder time = new StringBuilder(dateString2);
-    	time.setCharAt(12, (char)(newTime));//ends up with a question mark 
-    	//dateString2[11] = newTime;//(dateString2[0-10]+newTime+dateString2[13-18]);
-    	clock.setText(dateString2);
-    	System.out.println("Current hour "+dateString2.charAt(11)+dateString2.charAt(12));
-    	System.out.println("new time: " + time);
-    	*/
-		clock.setText(PTime.getTime());
+		 * Updates the time shown at the top of the main menu
+		 */
+		final Timeline timeline = new Timeline(new KeyFrame(Duration.millis( 500 ),
+	        event ->{clock.setText(PTime.getTime());} ));
+		timeline.setCycleCount(Animation.INDEFINITE);
+		timeline.play();
+		//clock.setText(PTime.getTime());//this updates the time shown at the top of the main menu
+		//clock.textProperty().bind(t);
 	}
 }

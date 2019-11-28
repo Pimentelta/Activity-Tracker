@@ -45,6 +45,9 @@ public class NewSessionController {
     @FXML
     private ComboBox<String> age;
     
+    /*
+     * When the back button is pressed. Go back to the main menu
+     */
     @FXML
     void cancelPressed(ActionEvent event) throws IOException {
     	Parent newSessionParent = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));
@@ -56,7 +59,9 @@ public class NewSessionController {
     	stage.show();
     	System.out.println("Cancel Pressed!");
     }
-
+    /*
+     * When the submit button is pressed. Go back to the main menu
+     */
     @FXML
     void submitPressed(ActionEvent event) throws IOException {
     	System.out.println("Submit Pressed!");
